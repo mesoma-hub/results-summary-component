@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+  <!-- Configure tailwind font -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+      tailwind.config = {
+      theme: {
+        fontFamily: {
+          sans: ["Hanken Grotesk", "sans-serif"]
+        }
+      }
+    }
+  </script>
+
+  <title>Frontend Mentor | Results summary component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    .light-slate-blue {
+      background-color: hsl(252, 100%, 67%);
+    }
+
+    .btn-color {
+      background-color: #303b5a;
+      color: #fff;
+    }
+    .violet-blue {
+      background-color: hsla(256, 72%, 46%, 1);
+    }
+
+    .text-memory {
+      background-color: rgba(255, 176, 31, 0.118);
+      color: rgb(255, 176, 31);
+    }
+
+    .text-reaction    {
+       background-color: rgba(255, 87, 87, 0.063);
+    color: rgb(255, 87, 87);
+  }
+
+    .text-verbal {
+      background-color: rgba(0, 189, 145, 0.192);
+      color: rgb(0, 189, 145);
+    }
+    .text-visual {
+      background-color: rgba(17, 37, 212, 0.137);
+      color: rgb(17, 37, 212);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Global Container -->
+  <div class="flex items-center justify-center min-h-screen font-sans font-bold">
+    <!-- Card -->
+    <div class="flex flex-col my-6 space-y-10 rounded-2xl shadow-2xl md:flex-row md:space-y-0 md:my-8">
+
+         <!-- Left item -->
+        <div class="flex flex-col rounded-2xl p-6 shadow-xl light-slate-blue md:p-6">
+          <h2 class="font-sans text-center font-bold text-2xl text-white my-4">Your Result</h2>
+
+        <!-- circle -->
+            <div class="flex flex-col items-center justify-center rounded-full w-[100px] h-[100px] p-20 mx-auto my-8 text-white violet-blue">
+              <div class="flex flex-col items-center justify-center">
+                <p class="font-sans text-white text-4xl font-bold">76</p>
+                <p class="font-thin text-sm text-white opacity-80">of 100</p>
+              </div>
+            </div>
+        
+
+          <h2 class="font-sans text-3xl font-bold text-center text-white my-4">Great</h2>
+
+          <p class="text-white text-sm leading-6 max-w-sm tracking-wide text-center mb-10">You scored higher than 65% of the people who have taken these tests.</p>
+        </div>
+      <!-- Right item -->
+      <div class="flex flex-col md:pt-10 space-y-6 bg-white m-4 md:m-10">
+
+        <h2 class="font-bold font-sans text-2xl text-left my-4">Summary</h2>
+        <div class="space-y-4">
+          
+          <div class="flex justify-between items-center space-x-20 py-4 rounded-md px-6 w-full text-reaction">
+            <p class="flex space-x-2"><img src="assets/images/icon-reaction.svg" alt=""> <span class="font-sans">Reaction</span></p>
+            <div class="font-sans">80/100</div>
+          </div>
+
+          <div class="flex justify-between items-center space-x-20 py-4 rounded-md px-6 w-full text-memory">
+            <p class="flex space-x-2"><img src="assets/images/icon-memory.svg" alt=""> <span class="font-sans">Memory</span></p>
+            <div class="font-sans">80/100</div>
+          </div>
+
+          <div class="flex justify-between items-center space-x-20 py-4 rounded-md px-6 w-full text-verbal">
+            <p class="flex space-x-2"><img src="assets/images/icon-verbal.svg" alt=""> <span class="font-sans">Verbal</span></p>
+            <div class="font-sans">80/100</div>
+          </div>
+
+          <div class="flex justify-between items-center space-x-20 py-4 rounded-md px-6 w-full text-visual">
+            <p class="flex space-x-2"><img src="assets/images/icon-visual.svg" alt=""> <span class="font-sans">Visual</span></p>
+            <div class="font-sans">80/100</div>
+          </div>
+
+          <button class="rounded-full mb-4 w-full btn-color px-8 py-4 hover:opacity-80 transition duration-200 text-white">Continue</button>
+        </div>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="attribution mt- ">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Mesoma Anigbogu</a>.
+  </div>
+</body>
+</html>
